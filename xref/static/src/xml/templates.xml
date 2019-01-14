@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates>
+
+    <!--
+        Cross Reference tab
+    -->
+
+    <t t-name="xref.Xref.Button">
+        <button t-attf-class="btn btn-sm btn-link o_chatter_xref_butt}" title="Referenced records">
+            <span>
+                <i class="fa fa-chain"/>
+                <span class="xref_button_count">
+                    <t t-esc="' ('+count+')'"/>
+                </span>
+            </span>
+        </button>
+    </t>
+
+    <t t-name="xref.XrefBox"></t>
+    <div class="o_xref_box">
+        <div class="o_border_dashed">
+            <span class="o_xref_title">X-Reference</span>
+        </div>
+
+        <div t-if="widget.xrefIDs.length > 0" class="o_xref_list">
+            <ul>
+            <t t-foreach="widget.xrefIDs" t-as="xref">
+                <li t-attf-title="xref.name" t-att-data-id="xref.id">
+                    <t t-field="xref.name"></t>
+                    <t t-field="xref.ref_model"></t>
+                    <t t-field="xref.ref_id"></t>
+                </li>
+                <!--<t t-call="mail.Attachment"/>-->
+            </t>
+            </ul>
+        </div>
+    </div>
+
+    <!--
+       @param {Object} attachment
+       @param {string} attachment.filename
+       @param {integer} attachment.id
+       @param {string} [attachment.mimetype]
+       @param {string} attachment.name
+       @param {boolean} attachment.upload
+       @param {string} attachment.url
+   -->
+    <!--<t t-name="mail.Attachment">
+        <t t-set="type" t-value="attachment.mimetype and attachment.mimetype.split('/').shift()"/>
+        <div t-attf-class="o_attachment #{ editable ? 'o_attachment_editable' : '' } #{attachment.upload ? 'o_attachment_uploading' : ''}"
+             t-att-title="attachment.name">
+            <div class="o_attachment_wrap">
+                <t t-set="has_preview"
+                   t-value="type == 'image' or type == 'video' or attachment.mimetype == 'application/pdf'"/>
+                <t t-set="ext" t-value="attachment.filename.split('.').pop()"/>
+
+                <div t-attf-class="o_image_box float-left #{has_preview ? 'o_attachment_view' : ''}"
+                     t-att-data-id="attachment.id">
+                    <a t-att-href='attachment.url' t-att-title="'Download ' + attachment.name"
+                       aria-label="Download">
+                        <span class="o_image o_hover" t-att-data-mimetype="attachment.mimetype" t-att-data-ext="ext"/>
+                    </a>
+
+                </div>
+
+                <div class="caption">
+                    <a class="ml4" t-att-href="attachment.url" t-att-title="'Download ' + attachment.name">
+                        <t t-esc='attachment.name'/>
+                    </a>
+                </div>
+                <div class="caption small">
+                    <a class="ml4 small text-uppercase" t-att-href="attachment.url"
+                       t-att-title="'Download ' + attachment.name">
+                        <b>
+                            <t t-esc='ext'/>
+                        </b>
+                    </a>
+                    <a class="ml4 o_attachment_download float-right" t-att-title="'Download ' + attachment.name"
+                       t-att-href='attachment.url'>
+                        <i t-attf-class="fa fa-download" role="img" aria-label="Download"/>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </t>
+
+    &lt;!&ndash;
+       @param {Object} attachment
+       @param {integer} attachment.id
+       @param {string} attachment.name
+       @param {string} attachment.url
+   &ndash;&gt;
+    <t t-name="mail.AttachmentPreview">
+        <div class="o_attachment" t-att-title="attachment.name">
+            <div class="o_attachment_wrap">
+                <div class="o_image_box">
+                    <div class="o_attachment_image"
+                         t-attf-style="background-image:url('/web/image/#{attachment.id}/160x160/?crop=true')"/>
+                    <div t-attf-class="o_image_overlay o_attachment_view" t-att-data-id="attachment.id">
+                        <span class="o_attachment_title text-white">
+                            <t t-esc="attachment.name"/>
+                        </span>
+                        <a class="o_attachment_download" t-att-href='attachment.url'>
+                            <i t-attf-class="fa fa-download text-white" t-att-title="'Download ' + attachment.name"
+                               role="img" aria-label="Download"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </t>
+-->
+</templates>
