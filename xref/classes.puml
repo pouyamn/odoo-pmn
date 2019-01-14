@@ -1,0 +1,30 @@
+@startuml
+
+
+
+class ir_model {
+o2m-xref.referencable referring_ids
+o2m-xref.referencable referred_ids (readonly)
+ }
+
+class xref_referencable {
+Determines which model is referable to another
+---
+m2o-ir.model referring_id 'Accepting Model'
+m2o-ir.model referring_id 'Linkable  Model'
+}
+
+ir_model "referring_id" o-- "referring_ids" xref_referencable
+ir_model "referred_id" o-.- "referred_ids" xref_referencable : readonly
+
+class xref_reference {
+Holds actual relations
+---
+char res_model 'Source Model'
+int  res_id 'Source Record'
+char ref_model_id 'Linked Model' //it should be selectable by user
+fields.Reference linked_rec
+}
+
+
+@enduml
