@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="view_model_form_inherit" model="ir.ui.view">
+            <field name="name">ir.model.form.inherit</field>
+            <field name="model">ir.model</field>
+            <field name="inherit_id" ref="base.view_model_form"></field>
+            <field name="arch" type="xml">
+                <notebook position="inside">
+                    <page string="Cross Reference">
+                        <field name="referring_ids" nolabel="1"/>
+                        <field name="referred_ids" nolabel="0"/>
+                    </page>
+                </notebook>
+
+            </field>
+        </record>
+
+
+    </data>
+</odoo>
