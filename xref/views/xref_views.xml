@@ -1,55 +1,64 @@
 <odoo>
-  <data>
-     <record id="referencable_tree" model="ir.ui.view">
-      <field name="name">xref.referencable.tree</field>
-      <field name="model">xref.referencable</field>
-      <field name="arch" type="xml">
-        <tree>
-          <field name="referred_id"/>
-        </tree>
-      </field>
-    </record>
+    <data>
+        <record id="referencable_tree" model="ir.ui.view">
+            <field name="name">xref.referencable.tree</field>
+            <field name="model">xref.referencable</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="referred_id"/>
+                </tree>
+            </field>
+        </record>
+        <record id="referencable_form" model="ir.ui.view">
+            <field name="name">xref.referencable.form</field>
+            <field name="model">xref.referencable</field>
+            <field name="arch" type="xml">
+                <form>
+                    <field name="referred_id"/>
+                </form>
+            </field>
+        </record>
 
-    <!-- actions opening views on models -->
-    <!--
-    <record model="ir.actions.act_window" id="xref.action_window">
-      <field name="name">xref window</field>
-      <field name="res_model">xref.xref</field>
-      <field name="view_mode">tree,form</field>
-    </record>
-    -->
+        <!-- actions opening views on models -->
+        <!--
+        <record model="ir.actions.act_window" id="xref.action_window">
+          <field name="name">xref window</field>
+          <field name="res_model">xref.xref</field>
+          <field name="view_mode">tree,form</field>
+        </record>
+        -->
 
-    <!-- server action to the one above -->
-    <!--
-    <record model="ir.actions.server" id="xref.action_server">
-      <field name="name">xref server</field>
-      <field name="model_id" ref="model_cross_reference_cross_reference"/>
-      <field name="state">code</field>
-      <field name="code">
-        action = {
-          "type": "ir.actions.act_window",
-          "view_mode": "tree,form",
-          "res_model": self._name,
-        }
-      </field>
-    </record>
-    -->
+        <!-- server action to the one above -->
+        <!--
+        <record model="ir.actions.server" id="xref.action_server">
+          <field name="name">xref server</field>
+          <field name="model_id" ref="model_cross_reference_cross_reference"/>
+          <field name="state">code</field>
+          <field name="code">
+            action = {
+              "type": "ir.actions.act_window",
+              "view_mode": "tree,form",
+              "res_model": self._name,
+            }
+          </field>
+        </record>
+        -->
 
-    <!-- Top menu item -->
-    <!--
-    <menuitem name="xref" id="xref.menu_root"/>
-    -->
-    <!-- menu categories -->
-    <!--
-    <menuitem name="Menu 1" id="xref.menu_1" parent="xref.menu_root"/>
-    <menuitem name="Menu 2" id="xref.menu_2" parent="xref.menu_root"/>
-    -->
-    <!-- actions -->
-    <!--
-    <menuitem name="List" id="xref.menu_1_list" parent="xref.menu_1"
-              action="xref.action_window"/>
-    <menuitem name="Server to list" id="xref" parent="xref.menu_2"
-              action="xref.action_server"/>
-    -->
-  </data>
+        <!-- Top menu item -->
+        <!--
+        <menuitem name="xref" id="xref.menu_root"/>
+        -->
+        <!-- menu categories -->
+        <!--
+        <menuitem name="Menu 1" id="xref.menu_1" parent="xref.menu_root"/>
+        <menuitem name="Menu 2" id="xref.menu_2" parent="xref.menu_root"/>
+        -->
+        <!-- actions -->
+        <!--
+        <menuitem name="List" id="xref.menu_1_list" parent="xref.menu_1"
+                  action="xref.action_window"/>
+        <menuitem name="Server to list" id="xref" parent="xref.menu_2"
+                  action="xref.action_server"/>
+        -->
+    </data>
 </odoo>

@@ -8,7 +8,7 @@
             <field name="arch" type="xml">
                 <notebook position="inside">
                     <page string="Cross Reference">
-                        <field name="referring_ids" nolabel="1"/>
+                        <field name="referring_ids" nolabel="1" context="{'default_referring_id':[active_id]}"/>
                         <field name="referred_ids" nolabel="0"/>
                     </page>
                 </notebook>

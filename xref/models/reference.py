@@ -15,9 +15,12 @@ class Reference(models.Model):
         if self.res_model:
             return [(ref.model, ref.name) for ref in self.env[self.res_model].referring_ids]
 
+
 class Referencable(models.Model):
     _name = 'xref.referencable'
     _description = ''
 
-    referring_id = fields.Many2one(comodel_name='ir.model', string='Accepting Model')
+    # Referring_id should be set in context in the caller view
+    referring_id = fields.Many2one(comodel_name='ir.model', string='Accepting Model', readonly=True)
+
     referred_id = fields.Many2one(comodel_name='ir.model', string='Linkable Model')
