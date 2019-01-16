@@ -1,0 +1,5 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_xref_referencable_all,xref.referencable_all,model_xref_referencable,base.group_user,1,0,0,0
+access_xref_reference_all,xref.reference_all,model_xref_reference,base.group_user,1,0,1,0
+access_xref_referencable_admin,xref.referencable_all,model_xref_referencable,base.group_system,1,1,1,1
+access_xref_reference_admin,xref.reference_all,model_xref_reference,base.group_system,1,1,1,1
