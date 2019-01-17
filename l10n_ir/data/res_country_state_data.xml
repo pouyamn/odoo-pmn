@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="base.state_ir_21" model="res.country.state">
+        <field name="name">Tehran</field>
+        <field name="code">021</field>
+        <field name="country_id" ref="base.ir"/>
+    </record>
+
+    <record id="base.state_ir_26" model="res.country.state">
+        <field name="name">Alborz</field>
+        <field name="code">026</field>
+        <field name="country_id" ref="base.ir"/>
+    </record>
+
+    <record id="base.state_ir_25" model="res.country.state">
+        <field name="name">Qom</field>
+        <field name="code">025</field>
+        <field name="country_id" ref="base.ir"/>
+    </record>
+
+    <record id="base.state_ir_86" model="res.country.state">
+        <field name="name">Markazi</field>
+        <field name="code">086</field>
+        <field name="country_id" ref="base.ir"/>
+    </record>
+
+    <record id="base.state_ir_24" model="res.country.state">
+        <field name="name">Zanjan</field>
+        <field name="code">024</field>
+        <field name="country_id" ref="base.ir"/>
+    </record>
+
+    <record id="base.state_ir_23" model="res.country.state">
+        <field name="name">Semnan</field>
+        <field name="code">023</field>
+        <field name="country_id" ref="base.ir"/>
+    </record>
+
+    <record id="base.state_ir_81" model="res.country.state">
+        <field name="name">Hamedan</field>
+        <field name="code">081</field>
+        <field name="country_id" ref="base.ir"/>
+    </record>
+
+    <record id="base.state_ir_28" model="res.country.state">
+        <field name="name">Qazvin</field>
+        <field name="code">028</field>
+        <field name="country_id" ref="base.ir"/>
+    </record>
+
+    <record id="base.state_ir_31" model="res.country.state">
+        <field name="name">Isfahan</field>
+        <field name="code">031</field>
+        <field name="country_id" ref="base.ir"/>
+    </record>
+
+    <record id="base.state_ir_44" model="res.country.state">
+        <field name="name">West Azerbaijan</field>
+        <field name="code">044</field>
+        <field name="country_id" ref="base.ir"/>
+    </record>
+
+    <record id="base.state_ir_11" model="res.country.state">
+        <field name="name">Mazandaran</field>
+        <field name="code">011</field>
+        <field name="country_id" ref="base.ir"/>
+    </record>
+
+    <record id="base.state_ir_74" model="res.country.state">
+        <field name="name">Kohgiluyeh and Boyer-Ahmad </field>
+        <field name="code">074</field>
+        <field name="country_id" ref="base.ir"/>
+    </record>
+
+    <record id="base.state_ir_83" model="res.country.state">
+        <field name="name">Kermanshah</field>
+        <field name="code">083</field>
+        <field name="country_id" ref="base.ir"/>
+    </record>
+
+    <record id="base.state_ir_51" model="res.country.state">
+        <field name="name">Razavi Khorasan </field>
+        <field name="code">051</field>
+        <field name="country_id" ref="base.ir"/>
+    </record>
+
+    <record id="base.state_ir_45" model="res.country.state">
+        <field name="name">Ardabil</field>
+        <field name="code">045</field>
+        <field name="country_id" ref="base.ir"/>
+    </record>
+
+    <record id="base.state_ir_17" model="res.country.state">
+        <field name="name">Golestan</field>
+        <field name="code">017</field>
+        <field name="country_id" ref="base.ir"/>
+    </record>
+
+    <record id="base.state_ir_41" model="res.country.state">
+        <field name="name">	East Azerbaijan</field>
+        <field name="code">041</field>
+        <field name="country_id" ref="base.ir"/>
+    </record>
+
+    <record id="base.state_ir_54" model="res.country.state">
+        <field name="name">Sistan and Baluchestan</field>
+        <field name="code">054</field>
+        <field name="country_id" ref="base.ir"/>
+    </record>
+
+    <record id="base.state_ir_87" model="res.country.state">
+        <field name="name">Kurdistan</field>
+        <field name="code">087</field>
+        <field name="country_id" ref="base.ir"/>
+    </record>
+
+    <record id="base.state_ir_71" model="res.country.state">
+        <field name="name">Fars</field>
+        <field name="code">071</field>
+        <field name="country_id" ref="base.ir"/>
+    </record>
+
+    <record id="base.state_ir_66" model="res.country.state">
+        <field name="name">Lorestan</field>
+        <field name="code">066</field>
+        <field name="country_id" ref="base.ir"/>
+    </record>
+
+    <record id="base.state_ir_34" model="res.country.state">
+        <field name="name">Kerman</field>
+        <field name="code">034</field>
+        <field name="country_id" ref="base.ir"/>
+    </record>
+
+    <record id="base.state_ir_56" model="res.country.state">
+        <field name="name">South Khorasan</field>
+        <field name="code">056</field>
+        <field name="country_id" ref="base.ir"/>
+    </record>
+
+    <record id="base.state_ir_13" model="res.country.state">
+        <field name="name">Gilan</field>
+        <field name="code">013</field>
+        <field name="country_id" ref="base.ir"/>
+    </record>
+
+    <record id="base.state_ir_77" model="res.country.state">
+        <field name="name">Bushehr</field>
+        <field name="code">077</field>
+        <field name="country_id" ref="base.ir"/>
+    </record>
+
+    <record id="base.state_ir_76" model="res.country.state">
+        <field name="name">Hormozgan</field>
+        <field name="code">076</field>
+        <field name="country_id" ref="base.ir"/>
+    </record>
+
+    <record id="base.state_ir_61" model="res.country.state">
+        <field name="name">Khuzestan</field>
+        <field name="code">061</field>
+        <field name="country_id" ref="base.ir"/>
+    </record>
+
+    <record id="base.state_ir_38" model="res.country.state">
+        <field name="name">Chaharmahal and Bakhtiari </field>
+        <field name="code">038</field>
+        <field name="country_id" ref="base.ir"/>
+    </record>
+
+    <record id="base.state_ir_58" model="res.country.state">
+        <field name="name">North Khorasan</field>
+        <field name="code">058</field>
+        <field name="country_id" ref="base.ir"/>
+    </record>
+
+    <record id="base.state_ir_35" model="res.country.state">
+        <field name="name">Yazd</field>
+        <field name="code">035</field>
+        <field name="country_id" ref="base.ir"/>
+    </record>
+
+    <record id="base.state_ir_84" model="res.country.state">
+        <field name="name">Ilam</field>
+        <field name="code">084</field>
+        <field name="country_id" ref="base.ir"/>
+    </record>
+
+
+</odoo>
