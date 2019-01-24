@@ -21,8 +21,8 @@
 
     # any module necessary for this one to work correctly
     'depends': ['base'],
-    'qweb':[
-        'static/xml/templates.xml',
+    'qweb': [
+        'static/src/xml/templates.xml',
     ],
     # always loaded
     'data': [
@@ -30,6 +30,7 @@
         'views/xref_views.xml',
         'views/ir_model_views.xml',
         'views/assets.xml',
+
     ],
     # only loaded in demonstration mode
     'demo': [
