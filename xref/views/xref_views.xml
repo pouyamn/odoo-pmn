@@ -23,7 +23,7 @@
             <field name="name">xref.reference.form</field>
             <field name="model">xref.reference</field>
             <field name="arch" type="xml">
-                <!--res_id and res_odel should be passed in action's context-->
+                <!--res_id and res_model should be passed in action's context-->
                 <form>
                     <field name="name"/>
                     <field name="linked_rec"/>

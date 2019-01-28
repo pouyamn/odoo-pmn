@@ -10,7 +10,8 @@ var QWeb = core.qweb;
 var XrefBox = Widget.extend({
     template: 'xref.XrefBox',
     events: {
-        "click .o_xref_open": "_onXrefOpen",
+        "click .o_xref_item": "_onXrefOpen",
+        "click .o_xref_add": "_onXrefAdd",
     },
     /**
      * @override
@@ -38,9 +39,15 @@ var XrefBox = Widget.extend({
             domain: domain,
         }).then(function (result) {
             self.xrefIDs = result;
+            //
+            //
+            //
+
         }));
     },
-
+    start: function(){
+        console.log('STaRTED 000000000000000000000000L')
+        return this._super.apply(this, arguments)},
     //--------------------------------------------------------------------------
     // Public
     //--------------------------------------------------------------------------
@@ -65,10 +72,46 @@ var XrefBox = Widget.extend({
         ev.stopPropagation();
         ev.preventDefault();
         var XrefID = $(ev.currentTarget).data('id');
+        var XrefModel= $(ev.currentTarget).data('model');
         if (XrefID) {
-            var xrefViewer = new DocumentViewer(this, this.attachmentIDs, activeAttachmentID);
-            xrefViewer.appendTo($('body'));
+             ev.stopPropagation();
+        ev.preventDefault();
+        var action = {
+                type: 'ir.actions.act_window',
+                name: 'Add Cross Reference',
+                target: 'new',
+                res_model: XrefModel,
+                res_id: XrefID,
+                view_id: 'xref.reference_form',
+                view_type: 'form',
+                views: [[false,'form']],
+                context: {
+                    default_res_model: this.currentResModel,
+                    default_res_id: this.currentResID,
+                         },
+                 flags:{mode:'readonly'}
+            };
+        this.do_action(action);
         }
+    },
+    _onXrefAdd: function (ev) {
+        ev.stopPropagation();
+        ev.preventDefault();
+        var action = {
+                type: 'ir.actions.act_window',
+                name: 'Add Cross Reference',
+                target:'new',
+                res_model:'xref.reference',
+                view_id:'xref.reference_form',
+                view_type:'form',
+                views: [[false,'form']],
+                context:{
+                    default_res_model: this.currentResModel,
+                    default_res_id: this.currentResID,
+                         },
+            };
+        this.do_action(action);
+
     },
 });
 
