@@ -1,7 +1,26 @@
 .o_chatter_xref_btn {
-                height: 2.3em;
-                float: right;
-            }
-.o_xref_add{
-    height:50px;
+    height: 2.3em;
+    float: right;
     }
+
+.o_xref_add{
+
+    }
+
+.o_border_dashed {
+    position: relative;
+    margin-top: 15px;
+    margin-bottom: 30px;
+    border-bottom: 1px dashed #dee2e6;
+    text-align: center;
+    }
+
+.o_xref_title {
+    position: relative;
+    top: 10px;
+    margin: 0 auto;
+    padding: 0 10px;
+    font-weight: bold;
+    background: white;
+    }
+

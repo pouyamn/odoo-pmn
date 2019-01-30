@@ -17,27 +17,36 @@
     </t>
 
     <t t-name="xref.XrefBox">
-    <div class="o_xref_box">
-        <div class="o_border_dashed">
-            <span class="o_xref_title">X-Reference</span>
-        </div>
+        <div class="o_xref_box">
+            <div class="o_border_dashed">
+                <span class="o_xref_title">X-Reference</span>
+            </div>
 
-        <div class="o_xref_list">
-            <ul>
-            <t  t-if="widget.xrefIDs.length > 0" t-foreach="widget.xrefIDs" t-as="xref">
-                <li t-attf-title="xref.name" t-att-data-id="xref.res_id" t-att-data-model="xref.res_model" class="o_xref_item">
-                    <t t-esc="xref.display_name"></t>...
-                    <t t-esc="xref.res_model"></t>
-                </li>
-                <!--<t t-call="mail.Attachment"/>-->
-            </t>
-                <li class="o_xref_add">
-                    Add...
-                </li>
-            </ul>
+            <div class="o_xref_list">
+                <table class="o_list_view table table-sm table-hover table-striped o_list_view_ungrouped">
+                    <tr>
+                        <th>
+                            Description
+                        </th>
+                        <th>
+                            Link
+                        </th>
+                    </tr>
+                    <t t-if="widget.xrefIDs.length > 0" t-foreach="widget.xrefIDs" t-as="xref">
+                        <tr t-attf-title="xref.name" t-att-data-id="xref.res_id" t-att-data-model="xref.res_model"
+                            class="o_xref_item">
+                            <td t-esc="xref.display_name"></td>
+                            <td t-esc="xref.res_model"></td>
+                        </tr>
+                        <!--<t t-call="mail.Attachment"/>-->
+                    </t>
+                    <tr class="o_xref_add">
+                        <td colspan="2">Add...</td>
+                    </tr>
+                </table>
+            </div>
         </div>
-    </div>
-</t>
+    </t>
     <!--
        @param {Object} attachment
        @param {string} attachment.filename
