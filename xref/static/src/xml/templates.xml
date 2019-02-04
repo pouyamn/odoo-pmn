@@ -17,7 +17,7 @@
     </t>
 
     <t t-name="xref.XrefBox">
-        <div class="o_xref_box">
+        <div class="o_xref_box" style="display:none;">
             <div class="o_border_dashed">
                 <span class="o_xref_title">X-Reference</span>
             </div>
@@ -36,7 +36,8 @@
                         <tr t-attf-title="xref.name" t-att-data-id="xref.res_id" t-att-data-model="xref.res_model"
                             class="o_xref_item">
                             <td t-esc="xref.display_name"></td>
-                            <td t-esc="xref.res_model"></td>
+                            <td t-esc="xref.res_model"></td> <!--TODO: show Display name of the Target Record-->
+
                         </tr>
                         <!--<t t-call="mail.Attachment"/>-->
                     </t>

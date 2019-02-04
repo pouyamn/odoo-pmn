@@ -46,8 +46,11 @@ var XrefBox = Widget.extend({
         }));
     },
     start: function(){
-        console.log('STaRTED 000000000000000000000000L')
-        return this._super.apply(this, arguments)},
+        $(".o_xref_box").slideDown()
+        return this._super.apply(this, arguments)
+    },
+
+
     //--------------------------------------------------------------------------
     // Public
     //--------------------------------------------------------------------------
@@ -78,7 +81,7 @@ var XrefBox = Widget.extend({
         ev.preventDefault();
         var action = {
                 type: 'ir.actions.act_window',
-                name: 'Add Cross Reference',
+                name: 'Edit Cross Reference',
                 target: 'new',
                 res_model: XrefModel,
                 res_id: XrefID,
