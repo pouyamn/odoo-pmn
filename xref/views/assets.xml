@@ -7,6 +7,7 @@
         <link rel="stylesheet" type="text/css" href="/xref/static/src/css/xref.css"/>
         <script type="text/javascript" src="/xref/static/src/js/xref_box.js"></script>
         <script type="text/javascript" src="/xref/static/src/js/xref_butt.js"></script>
+        <script type="text/javascript" src="/xref/static/src/js/form_view.js"></script>
     </xpath>
 </template>
 

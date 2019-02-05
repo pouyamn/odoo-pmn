@@ -39,10 +39,6 @@ var XrefBox = Widget.extend({
             domain: domain,
         }).then(function (result) {
             self.xrefIDs = result;
-            //
-            //
-            //
-
         }));
     },
     start: function(){
