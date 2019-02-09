@@ -29,14 +29,18 @@
                             Description
                         </th>
                         <th>
-                            Link
+                            Target
+                        </th>
+                        <th>
+                            Target Type
                         </th>
                     </tr>
                     <t t-if="widget.xrefIDs.length > 0" t-foreach="widget.xrefIDs" t-as="xref">
-                        <tr t-attf-title="xref.name" t-att-data-id="xref.res_id" t-att-data-model="xref.res_model"
+                        <tr t-att-title="xref.name" t-att-data-id="xref.linked_rec.split(',')[1]" t-att-data-model="xref.linked_rec.split(',')[0]"
                             class="o_xref_item">
                             <td t-esc="xref.display_name"></td>
-                            <td t-esc="xref.res_model"></td> <!--TODO: show Display name of the Target Record-->
+                            <td t-esc="xref.linked_rec_name"></td>
+                            <td t-esc="xref.target_model"></td>
 
                         </tr>
                         <!--<t t-call="mail.Attachment"/>-->
