@@ -17,6 +17,8 @@ FormView.include({
         this._super.apply(this, arguments);
 
             this.fieldsInfo[this.viewType].xref_count = {};
+            //fixme: it should be removed after fix in mail_thread.py
+            this.fieldsInfo[this.viewType].can_have_xref = {};
     },
 });
 

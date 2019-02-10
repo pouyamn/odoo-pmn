@@ -3,7 +3,7 @@ from odoo import models, fields, api, _
 
 class Reference(models.Model):
     _name = 'xref.reference'
-    _description = 'eee'
+    _description = 'Cross Reference'
 
     name = fields.Char(string='Note', required=True)
 
@@ -16,6 +16,7 @@ class Reference(models.Model):
     def _get_ref_models(self):
         model = self.env.context.get('default_res_model', False)
         if model:
+            # todo : optimize by using read_group()
             return [(ref.referred_id.model, ref.referred_id.name) for ref in
                     self.env['ir.model'].search([('model', '=', model)]).referring_ids]
         else:
@@ -37,7 +38,7 @@ class Reference(models.Model):
 
 class Referencable(models.Model):
     _name = 'xref.referencable'
-    _description = 'rrr'
+    _description = 'Enable Referencing'
 
     # Referring_id should be set in context in the caller view
     referring_id = fields.Many2one(comodel_name='ir.model', string='Accepting Model', readonly=True)

@@ -31,9 +31,13 @@ Chatter.include({
 
     start: function(){
         var res=this._super.apply(this, arguments)
-        this.$('.o_topbar_right_area').append(QWeb.render('xref.Xref.Button', {
-            count: this.record.data.xref_count || 0,
-        }));
+        if (this.record.data.can_have_xref){//fixme: it should be fixed after fix in mail_thread.py
+            this.$('.o_topbar_right_area').append(QWeb.render('xref.Xref.Button',
+                {
+                count: this.record.data.xref_count || 0,
+                }
+            ))
+            };
         return res
     },
 
