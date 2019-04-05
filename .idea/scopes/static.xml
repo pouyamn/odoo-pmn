@@ -1,0 +1,3 @@
+<component name="DependencyValidationManager">
+  <scope name="static" pattern="file[odoo-pmn]:*static*/||file[odoo]:*static*/" />
+</component>
