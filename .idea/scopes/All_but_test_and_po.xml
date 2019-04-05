@@ -1,3 +1,0 @@
-<component name="DependencyValidationManager">
-  <scope name="All but test and po" pattern="(file[odoo-pmn]:*/||file[odoo]:*/)&amp;&amp;!file[odoo]:odoo/addons/test_*//*&amp;&amp;!file[odoo]:*.po**&amp;&amp;!file[odoo]:*test*" />
-</component>
