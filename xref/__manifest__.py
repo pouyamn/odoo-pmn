@@ -3,7 +3,7 @@
     'name': "Cross Reference",
 
     'summary': """
-        Link and attache any model to others""",
+        Link and attach any model to others""",
 
     'description': """
 
