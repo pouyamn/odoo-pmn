@@ -8,8 +8,16 @@
             <field name="arch" type="xml">
                 <notebook position="inside">
                     <page string="Cross Reference">
-                        <field name="referring_ids" nolabel="1" context="{'default_referring_id':[active_id]}"/>
-                        <field name="referred_ids" nolabel="0"/>
+                        <group string="Allow adding references from records of these models" name="referring">
+                            <field name="referring_ids"  context="{'default_referring_id':[active_id]}"  nolabel="1"/>
+                        </group>
+                        <group string="List of models that records of current model can be linked to" name="referred">
+                            <field name="referred_ids" nolabel="1">
+                                <tree>
+                                    <field name="referred_id" string="Model"/>
+                                </tree>
+                            </field>
+                        </group>
                     </page>
                 </notebook>
 

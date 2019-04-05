@@ -67,8 +67,7 @@ Chatter.include({
         var self = this;
         this.xrefs = new XrefBox(this, this.record);
 
-        this.xrefs.insertAfter(this.$('.o_chatter_topbar')).then(function () {
-        });
+        this.xrefs.insertAfter(this.$('.o_chatter_topbar'))
         this.xrefBoxOpen = true;
     },
     /**
